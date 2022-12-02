@@ -164,3 +164,14 @@ class club_deportivoList(ListView):
 class club_deportivoDetailView(DetailView):
    model = club_deportivo
    template_name = 'MiApp/deporte_detalle.html'
+
+class club_deportivoDeleteView(DeleteView):
+   model = club_deportivo
+   success_url ='MiApp/deporte_detalle.html'      
+   
+
+
+
+#class club_deportivoDetailView(DetailView):
+   model = club_deportivo
+   template_name = 'MiApp/deporte_detalle.html'

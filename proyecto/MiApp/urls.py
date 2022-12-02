@@ -17,7 +17,8 @@ urlpatterns = [
     path('profesorForm/', profesorForm),
     path('alumnoForm/', alumnoForm),
     path('deporte_list/', views.club_deportivoList.as_view(), name='List'),
-    path('deporte_detalle/<pk>', views.club_deportivoDetailView.as_view(), name='Detail')
+    path('deporte_detalle/<pk>', views.club_deportivoDetailView.as_view(), name='Detail'),
+    path('deporte_confirm_delete/<pk>', views.club_deportivoDeleteView.as_view(), name='Delete')
 ]
 
 
