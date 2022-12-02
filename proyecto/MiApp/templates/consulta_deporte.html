@@ -1,0 +1,20 @@
+<form action="" method="GET"> 
+
+
+    <p>         consulta info. Deportes                </p>
+   
+  <input type='text' name='deporte' id='deporte'>>
+  <input type='submit' value='enviar'></button> 
+</form>
+
+{% if  CLUB %}
+
+   <ul>
+    <li> Deporte a cargo del profesor {{CLUB.nombre}} </li>
+   </ul>
+{% endif %}
+
+{% if error %}
+    <p>{{error}}</p>
+{% endif %}
+

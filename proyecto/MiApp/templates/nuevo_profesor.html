@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block codigoDinamico %} 
+
+<form action="" method="POST"> {% csrf_token %}
+
+   
+  <h1> Nuevo Profesor </h1>
+  <table>
+    {{formulario_NP.as_table}}
+  </table>
+
+  <button type='submit' value='enviar'>continuar</button> 
+  
+
+</form>
+
+{% endblock %}
+
+  

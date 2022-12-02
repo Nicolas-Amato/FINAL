@@ -1,0 +1,14 @@
+{% for deporte in object_list %}
+
+<ul>
+    <li>
+        {{deporte}}
+
+        <button>
+            <a href="{% url 'Detail' deporte %}">ver detalles</a>
+        </button> 
+    
+    </li>
+</ul>
+
+{% endfor %}

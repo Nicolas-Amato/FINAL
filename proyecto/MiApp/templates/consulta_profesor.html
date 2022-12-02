@@ -1,0 +1,21 @@
+<form action="" method="get"> 
+
+   
+    <p>         Consulta info. PROFESORES              </p>
+
+    
+    <input type="text" name="nombre" id="profesor">
+  
+    <input type='submit' value='enviar'></button> 
+</form>
+
+{% if  PROD %}
+
+   <ul>
+        <li> El deporte {{PROD.deporte}} a cargo del profesor {{PROD.nombre}} </li>
+   </ul>
+{% endif %}
+
+{% if error %}
+    <p>{{error}}</p>
+{% endif %}
