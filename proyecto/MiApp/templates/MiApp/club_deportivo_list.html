@@ -1,15 +1,15 @@
-{% for deporte in object_list %}
+{% for club_deportivo in object_list %}
 
 <ul>
     <li>
-        {{deporte}}
+        {{club_deportivo}}
 
         <button>
-            <a href="{% url 'Detail' deporte %}">ver detalles</a>
+            <a href="{% url 'Detail' club_deportivo %}">ver detalles</a>
         </button> 
 
         <button>
-            <a href="{% url 'Delete' deporte %}">Eliminar</a>
+            <a href="{% url 'Delete' club_deportivo %}">Eliminar</a>
         </button> 
     
     </li>
