@@ -167,11 +167,11 @@ class club_deportivoDetailView(DetailView):
 
 class club_deportivoDeleteView(DeleteView):
    model = club_deportivo
-   success_url ='MiApp/deporte_detalle.html'      
+   success_url ='/deporte_list'   
    
-
-
-
-#class club_deportivoDetailView(DetailView):
+   
+   
+class club_deportivoUpdateView(UpdateView):
    model = club_deportivo
-   template_name = 'MiApp/deporte_detalle.html'
+   success_url ='/deporte_list'   
+   fields = ['deporte','nombre']

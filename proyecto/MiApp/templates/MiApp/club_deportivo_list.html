@@ -5,11 +5,15 @@
         {{club_deportivo}}
 
         <button>
-            <a href="{% url 'Detail' club_deportivo %}">ver detalles</a>
+            <a href="{% url 'Detail' club_deportivo.id %}">ver detalles</a>
         </button> 
 
         <button>
-            <a href="{% url 'Delete' club_deportivo %}">Eliminar</a>
+            <a href="{% url 'Delete' club_deportivo.id %}">Eliminar</a>
+        </button> 
+    
+        <button>
+            <a href="{% url 'Update' club_deportivo.id %}">Upadte</a>
         </button> 
     
     </li>
