@@ -19,7 +19,8 @@ urlpatterns = [
     path('deporte_list/', views.club_deportivoList.as_view(), name='List'),
     path('deporte_detalle/<pk>', views.club_deportivoDetailView.as_view(), name='Detail'),
     path('deporte_confirm_delete/<pk>', views.club_deportivoDeleteView.as_view(), name='Delete'),
-    path('club_deporte_edit/<pk>', views.club_deportivoUpdateView.as_view(), name='Update')
+    path('club_deportivo_form/<pk>', views.club_deportivoUpdateView.as_view(), name='Update'),
+    path('club_form/', views.club_deportivoCreateView.as_view(), name='Create')
 ]
 
 

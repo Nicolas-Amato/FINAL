@@ -175,3 +175,9 @@ class club_deportivoUpdateView(UpdateView):
    model = club_deportivo
    success_url ='/deporte_list'   
    fields = ['deporte','nombre']
+
+
+class club_deportivoCreateView(CreateView):
+   model = club_deportivo
+   success_url ='/deporte_list'   
+   fields = ['deporte','nombre']
