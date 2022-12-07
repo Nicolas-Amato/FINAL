@@ -5,6 +5,8 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import profesor, club_deportivo, alumno
 from .forms import club_deportivoForm, profesorForm, alumnoForm, SignUpForm
+##redirecciona correcta###
+from django.urls import reverse_lazy
 
 
 def index(request):
@@ -190,5 +192,5 @@ class club_deportivoCreateView(CreateView):
 
 class signUpView(CreateView):
    form_class = SignUpForm
-   success_url = ''
-   template_name: 'registro.html'
+   success_url = reverse_lazy('home')
+   template_name = 'registro.html'
