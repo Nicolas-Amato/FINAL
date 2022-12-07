@@ -4,7 +4,7 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import profesor, club_deportivo, alumno
-from .forms import club_deportivoForm, profesorForm, alumnoForm
+from .forms import club_deportivoForm, profesorForm, alumnoForm, SignUpForm
 
 
 def index(request):
@@ -155,6 +155,11 @@ def modif_profesor(request, DNI_profesor):
    return render(request, 'modif_profesor.html', {'formulario_NP': formulario_NP})
 
 
+
+
+## vistas basada en class
+
+
 class club_deportivoList(ListView):
    
    model = club_deportivo
@@ -169,8 +174,6 @@ class club_deportivoDeleteView(DeleteView):
    model = club_deportivo
    success_url ='/deporte_list'   
    
-   
-   
 class club_deportivoUpdateView(UpdateView):
    model = club_deportivo
    success_url ='/deporte_list'   
@@ -181,3 +184,11 @@ class club_deportivoCreateView(CreateView):
    model = club_deportivo
    success_url ='/deporte_list'   
    fields = ['deporte','nombre']
+   
+   
+#####login...
+
+class signUpView(CreateView):
+   form_class = SignUpForm
+   success_url = ''
+   template_name: 'registro.html'

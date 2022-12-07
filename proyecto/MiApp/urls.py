@@ -20,7 +20,8 @@ urlpatterns = [
     path('deporte_detalle/<pk>', views.club_deportivoDetailView.as_view(), name='Detail'),
     path('deporte_confirm_delete/<pk>', views.club_deportivoDeleteView.as_view(), name='Delete'),
     path('club_deportivo_form/<pk>', views.club_deportivoUpdateView.as_view(), name='Update'),
-    path('club_form/', views.club_deportivoCreateView.as_view(), name='Create')
+    path('club_form/', views.club_deportivoCreateView.as_view(), name='Create'),
+    path('signup/', views.signUpView.as_view(), name='Sign Up')
 ]
 
 
